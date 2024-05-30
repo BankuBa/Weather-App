@@ -105,3 +105,30 @@ body{
   font-size: 28px;
   margin-top: -6px;
 }
+ 
+
+/* Mobile */
+
+@media(max-width : 720px) {
+  .weather{
+    display: block;
+  }
+  .search input {
+    width: 12rem;
+    margin-left: -15px;
+  }
+  .col img{
+width: 26px;
+margin-left: -15px;
+  }
+  
+  .col p{
+    font-size: 16px;
+  }
+
+ .weather h1{
+  font-size: 65px;
+ }
+
+
+}
