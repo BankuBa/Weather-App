@@ -1,6 +1,5 @@
 const apiKey = "4e6b9b385b2cd81f20a9a2e8e08b706b";
-const apiUrl =
-  "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 
 let searchBox = document.querySelector(".search input") 
 let searchButton = document.querySelector(".search button"); 
@@ -10,8 +9,8 @@ let weatherInfo = document.querySelector(".weather")
 
 
 async function checkWeather(city) {
-  const responce = await fetch
-    (apiUrl + city +`&appid=${apiKey}`)
+
+  const responce = await fetch(apiUrl + city +`&appid=${apiKey}`)
   let data = await responce.json()
   console.log(data);
 
@@ -19,8 +18,7 @@ async function checkWeather(city) {
     document.querySelector(".invalid").style.display = "block";
   }
 
-  document.querySelector(".temp").innerHTML = `${Math.round(data.main.temp)}°c`;
-
+    document.querySelector(".temp").innerHTML = `${Math.round(data.main.temp)}°c`;
     document.querySelector(".humidity").innerHTML = `${data.main.humidity}%`; 
     document.querySelector(".wind").innerHTML = `${data.wind.speed} km/h`;
     document.querySelector(".city").innerHTML = data.name
